@@ -103,7 +103,5 @@ mod test {
         network.start();
 
         let _ = network.trigger("notify", json!("Hello"));
-
-        loop {}
     }
 }
