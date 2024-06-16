@@ -25,6 +25,7 @@ mod test {
 
         if let Ok(message) = my_simple_actor.get_outport().1.recv() {
             println!("{:?}", message);
+            assert_eq!("Hello world!", message.as_str().unwrap_or_default());
         }
     }
 }

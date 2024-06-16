@@ -86,6 +86,7 @@ mod test {
         });
 
         let logger = SimpleActor::new(|message, _, _outport| {
+            assert_eq!("Hello world!", message.as_str().unwrap_or_default());
             println!("[LOG] {}", message.as_str().unwrap_or_default());
             Ok(())
         });
